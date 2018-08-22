@@ -2250,6 +2250,46 @@ found and the point will be rejected.</Documentation>
       <!-- End ExtractEdges -->
     </SourceProxy>
     <!-- ==================================================================== -->
+    <SourceProxy class="vtkExtractColorEdges" label="Extract Color Edges" name="ExtractColorEdges">
+      <Documentation long_help="Extract color edges of 2D and 3D cells as lines."
+                     short_help="Covert data to wireframe.">The Extract Edges
+                     filter produces a wireframe version of the input dataset
+                     by extracting all the edges of the dataset's cells as
+                     lines. This filter operates on any type of data set and
+                     produces polygonal output.</Documentation>
+      <InputProperty command="SetInputConnection" name="Input">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+        <DataTypeDomain name="input_type">
+          <DataType value="vtkDataSet" />
+        </DataTypeDomain>
+        <Documentation>This property specifies the input to the Extract Edges filter.</Documentation>
+      </InputProperty>
+      <!-- End ExtractColorEdges -->
+    </SourceProxy>
+    <!-- ==================================================================== -->
+    <SourceProxy class="vtkExtractColorFaces" label="Extract Color Faces" name="ExtractColorFaces">
+      <Documentation long_help="Extract color faces of 2D and 3D cells as polygons."
+                     short_help="Covert data to wireframe.">The Extract Edges
+                     filter produces a wireframe version of the input dataset
+                     by extracting all the faces of the dataset's cells as
+                     lines. This filter operates on any type of data set and
+                     produces polygonal output.</Documentation>
+      <InputProperty command="SetInputConnection" name="Input">
+        <ProxyGroupDomain name="groups">
+          <Group name="sources" />
+          <Group name="filters" />
+        </ProxyGroupDomain>
+        <DataTypeDomain name="input_type">
+          <DataType value="vtkDataSet" />
+        </DataTypeDomain>
+        <Documentation>This property specifies the input to the Extract Faces filter.</Documentation>
+      </InputProperty>
+      <!-- End ExtractColorFaces -->
+    </SourceProxy>
+    <!-- ==================================================================== -->
     <SourceProxy class="vtkDataSetSurfaceFilter"
                  label="Extract Surface"
                  name="DataSetSurfaceFilter">

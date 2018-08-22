@@ -198,6 +198,8 @@
   <Proxy group="filters" name="ExtractBlock" />
   <Proxy group="filters" name="ExtractComponent" />
   <Proxy group="filters" name="ExtractEdges" />
+  <Proxy group="filters" name="ExtractColorEdges" />
+  <Proxy group="filters" name="ExtractColorFaces" />
   <Proxy group="filters" name="ExtractEnclosedPoints" />
   <Proxy group="filters" name="ExtractGeometry" />
   <Proxy group="filters" name="ExtractGrid" />

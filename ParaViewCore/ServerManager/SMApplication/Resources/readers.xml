@@ -3094,6 +3094,28 @@
       </StringVectorProperty>
       <!-- End PLYReaderCore -->
     </Proxy>
+    <Proxy class="vtkOffUnstructuredGridReader" name="OffReader">
+      <StringVectorProperty animateable="0"
+                            command="SetFileName"
+                            name="FileName"
+                            number_of_elements="1"
+                            panel_visibility="never" >
+        <FileListDomain name="files" />
+        <Documentation>This property specifies the file name for the OFF reader.</Documentation>
+      </StringVectorProperty>
+      <!-- End OffReader -->
+    </Proxy>
+    <Proxy class="vtkMeshUnstructuredGridReader" name="MeshReader">
+      <StringVectorProperty animateable="0"
+                            command="SetFileName"
+                            name="FileName"
+                            number_of_elements="1"
+                            panel_visibility="never" >
+        <FileListDomain name="files" />
+        <Documentation>This property specifies the file name for the MESH reader.</Documentation>
+      </StringVectorProperty>
+      <!-- End OffReader -->
+    </Proxy>
 
     <SourceProxy name="AMReXParticlesReaderCore"
       class="vtkAMReXParticlesReader">
@@ -5017,6 +5039,49 @@
       </Hints>
       <!-- End pdbreader -->
     </SourceProxy>
+    
+    <SourceProxy class="vtkOffUnstructuredGridReader" label="Off Reader" name="offreader">
+      <Documentation long_help="Reads OFF files."
+                     short_help="Read OFF files.">The PDB reader reads files in
+                     the format used by the Protein Data Bank (an archive of
+                     experimentally determined three-dimensional structures of
+                     biological macromolecules). The expected file extension is
+                     .off. The output datasets are polygonal.</Documentation>
+      <StringVectorProperty animateable="0"
+                            command="SetFileName"
+                            name="FileName"
+                            number_of_elements="1"
+                            panel_visibility="never" >
+        <FileListDomain name="files" />
+        <Documentation>This property specifies the file name for the PDB
+        reader.</Documentation>
+      </StringVectorProperty>
+      <Hints>
+        <ReaderFactory extensions="off" file_description="Object File Format" />
+      </Hints>
+      <!-- End offreader -->
+    </SourceProxy>
+    
+    <SourceProxy class="vtkMeshUnstructuredGridReader" label="Mesh Reader" name="meshreader">
+      <Documentation long_help="Reads MESH files."
+                     short_help="Read MESH files.">Object File Format (.off) files are used to 
+                     represent the geometry of a model by specifying the polygons or polyhedra of the model's 
+                     surface. The polygons or polyhedra can have any number of vertices..</Documentation>
+      <StringVectorProperty animateable="0"
+                            command="SetFileName"
+                            name="FileName"
+                            number_of_elements="1"
+                            panel_visibility="never" >
+        <FileListDomain name="files" />
+        <Documentation>This property specifies the file name for the PDB
+        reader.</Documentation>
+      </StringVectorProperty>
+      <Hints>
+        <ReaderFactory extensions="mesh" file_description="MESH Files" />
+      </Hints>
+      <!-- End meshreader -->
+    </SourceProxy>
+    
     <SourceProxy class="vtkXYZMolReader2"
                  label="XYZ Reader"
                  name="xyzreader">
